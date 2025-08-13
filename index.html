@@ -1,7 +1,62 @@
 <html>
 <head>
+<<<<<<< HEAD
 </head>
 <body>
 <h1> Hello Riya </h1>
 </body>
 </html>
+=======
+<title> Addition App </title>
+<style>
+	*{text-align:center;font-size:50px;}
+	body{background-color:Lightpink;}
+</style>
+</head>
+<body>
+<h1> Addition App </h1>
+<form onsubmit="find()">
+<input type="number" step="0.01" id="n1" placeholder="Enter First Number"/>
+<br/> <br/>
+<input type="number" step="any" id="n2" placeholder="Enter Second Number"/>
+<br/> <br/>
+<input type="submit" value="Add" />
+</form>
+<h2 id="msg"/>
+<script>
+function find()
+{ 
+event.preventDefault();
+
+let n1=document.getElementById("n1");
+let n2=document.getElementById("n2");
+let msg=document.getElementById("msg");
+
+if(n1.value==="")
+{
+alert("Please Enter First Number");
+n1.focus();
+msg.innerHTML="";
+return;
+}
+if(n2.value==="")
+{
+alert("Please Enter Second Number");
+n2.focus();
+msg.innerHTML="";
+return;
+}
+
+let num1=parseFloat(n1.value);
+let num2=parseFloat(n2.value);
+let res=num1+num2;
+msg.innerHTML="Result of Addition=" +res.toFixed(3);
+
+}
+
+
+</script>
+</body>
+
+</html>
+>>>>>>> ff163560a7c8704ddb8b98cdf71216ea69637c1e
