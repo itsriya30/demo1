@@ -1,4 +1,4 @@
-const apiKey = "62ce87214ba33755382cbbecd26a857e"
+const apiKey = "yor key"
 const button = document.getElementById("getWeatherBtn");
 const input = document.getElementById("cityInput");
 const resultDiv = document.getElementById("weatherResult");
@@ -39,3 +39,4 @@ function fetchWeather(city) {
             .catch(error => reject(error));
     });
 }
+
