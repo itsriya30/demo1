@@ -1,0 +1,14 @@
+/* 
+h1 {
+    color: hsl(300, 7%, 12%);
+    text-align: center;
+}
+ */ 
+body {
+    background-color: powderblue;
+}
+
+h1 {
+    color: hsl(300, 7%, 12%);
+    text-align: center;
+}
