@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - RIYA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>My Projects - Riya</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="projects">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+        <h3>Project 1 - Quadratic Equation Roots</h3>
+        <p>Python program to find roots of a quadratic equation.</p>
+        <button onclick="toggleCode('code1')">Show Code</button>
+        <div id="code1" class="code">
+<pre>
+import math
+
+def find_roots(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant > 0:
+        root1 = (-b + math.sqrt(discriminant)) / (2 * a)
+        root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        return f"Roots are real and distinct: {root1}, {root2}"
+    elif discriminant == 0:
+        root = -b / (2 * a)
+        return f"Roots are real and equal: {root}"
+    else:
+        real_part = -b / (2 * a)
+        imaginary_part = math.sqrt(-discriminant) / (2 * a)
+        return f"Roots are complex: {real_part} � {imaginary_part}i"
+
+# Example:
+a, b, c = 1, -3, 2
+print(find_roots(a, b, c))
+</pre>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <h3>Project 2 - Prime Numbers from 1 to 100</h3>
+        <p>Python program to print all prime numbers between 1 and 100.</p>
+        <button onclick="toggleCode('code2')">Show Code</button>
+        <div id="code2" class="code">
+<pre>
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+primes = [i for i in range(1, 101) if is_prime(i)]
+print("Prime numbers between 1 and 100:", primes)
+</pre>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <h3>Project 3 - Functions in Python</h3>
+        <p>Python program demonstrating function as object, lambda, inner functions, and anonymous functions.</p>
+        <button onclick="toggleCode('code3')">Show Code</button>
+        <div id="code3" class="code">
+<pre>
+# Function as object
+def greet():
+    return "Hello, world!"
+
+say_hello = greet
+print(say_hello())
+
+# Lambda function (arrow function equivalent)
+add = lambda a, b: a + b
+print(f"Sum using lambda: {add(5, 7)}")
+
+# Inner function
+def outer_function(msg):
+    def inner_function():
+        print(f"Message from inner function: {msg}")
+    inner_function()
+
+outer_function("Hello from the inner function!")
+
+# Anonymous function using lambda
+print((lambda x, y, z: x * y(3, 4))(3, add))
+</pre>
+        </div>
+    </div>
+
+</section>
+
+<script>
+function toggleCode(codeId) {
+    const codeElement = document.getElementById(codeId);
+    codeElement.style.display = (codeElement.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
